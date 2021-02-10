@@ -1,0 +1,25 @@
+{
+  "name": "donationaly",
+  "version": "1.0.0",
+  "description": "IWP project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aarshtodi/Donationaly.git"
+  },
+  "author": "Dhruv Patel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aarshtodi/Donationaly/issues"
+  },
+  "homepage": "https://github.com/aarshtodi/Donationaly#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0"
+  }
+}
