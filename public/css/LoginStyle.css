@@ -4,10 +4,6 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
-  body {
-    background: linear-gradient(to right, #2e1ffc 0%, #230f97 100%);
-    font-size: 12px;
-  }
   
   body, button, input {
     font-family: 'Montserrat', sans-serif;

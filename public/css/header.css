@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+	margin: 0;
+	background: #222;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
 
 .topnavigation {
 	width: 80%;
 	margin: 0 auto;
 }
 
-header {
+.header {
   background: beige;
 }
 
-header::after {
+.header::after {
   content: '';
   display: table;
   clear: both;
@@ -66,3 +72,4 @@ nav a::before {
 nav a:hover::before {
   width: 100%;
 }
+
