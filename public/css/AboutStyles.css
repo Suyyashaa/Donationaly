@@ -1,40 +1,61 @@
-#heading {
-    font-family: fantasy;
-    font-weight: bolder;
-    font-size: xx-large;
-    text-align: center;
-    color: beige;
-    background-color: black;
-    border-radius: 10px;
-}
-body{
-    background-color: beige;
-    /*background-image: url(https://www.dynamics-hr-management.com/images/slider_dynamics_hr_management_for_ngo_m.jpg);*/
-}
-#ie {
-    color: black;
-    font-weight: bolder;
-    font-size: 20px;
-    text-align: justify;
-    margin: 15px;
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url(https://news.usc.edu/files/2014/12/iStock_000049281378_small-824x549.jpg);
-}
-#de {
-    text-align: justify;
-    margin: 10px;
-    border: 2px solid black;
-    padding: 15px;
-}
-#container{
+.about-upper{
     display: flex;
 }
-#leftist{
-    width: 50%;
+
+.about-container{
+    width: 85%;
+    margin: auto;
+    background-color: whitesmoke;
 }
-#mapping{
-    width: 50%;
+
+.about-right{
+    padding: 15px;
+    padding-top: 25px;
 }
-span{background-color: beige;}
+
+.about-left{
+    padding: 15px;
+    text-align: justify;
+}
+
+.about-heading{
+    background-color: rgb(167, 164, 164);
+    padding: 10px;
+    margin: 10px;
+    font-family: "Akaya Teliviga";
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.about-right img{
+    filter: grayscale(100%);
+	border-radius: 5px;
+}
+
+.about-right img:hover {
+    filter: grayscale(0%);
+	border-radius: 5px;
+}
+
+.about-quote{
+    font-style: italic;
+}
+
+.about-quote:hover{
+    background-color: beige;
+}
+
+.about-left{
+    font-family: "Lobster";
+    font-size: 18px;
+}
+
+body {
+    
+  }
+
+
+.about-map{
+    text-align: center;
+    padding-top: 15px;
+}
