@@ -82,7 +82,7 @@
 }
 
 .third:hover {
-  border-color: white;
+  border-color: #f50589;
   box-shadow: 0 0 10px 0 transparent inset, 0 0 10px 4px transparent;
 }
 
@@ -90,7 +90,7 @@
   position: relative;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #aceff7;
+  background-color: #f7acde;
   width: 100%;
   height: 10em;
   display: flex;
@@ -134,19 +134,21 @@
     flex-direction: column;
     text-align: center;
     padding-top: 5em;
+    padding-bottom: 1em;
 }
 
-.photo1 {
-    text-align: center;
+.photosrow2 {
+    justify-content:space-between;
     
 }
 
 .video{
+    position: relative;
     width: 100%;
     height: 50em ;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
-    background-color:blanchedalmond;
+    background-color:rgb(253, 199, 117);
     padding-top: 5em;
 }
 .video h1 {
@@ -156,7 +158,7 @@
 .LCC {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: white;
+    background-color: rgb(253, 199, 117);
     width: 100%;
     height: 10em;
     display: flex;
@@ -212,5 +214,9 @@
 }
 
 .custom-shape-divider-top-1615984118 .shape-fill {
-    fill: #aceff7;
+    fill: #f7acde;
+}
+
+.video .custom-shape-divider-top-1615984118 .shape-fill {
+    fill: aliceblue;
 }
