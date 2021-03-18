@@ -98,13 +98,13 @@
   .screen-body-item {
     flex: 1;
     padding: 50px;
-    padding: 50px 50px 50px 0;
+    padding: 60px 50px 60px 0;
   }
 
   .screen-body-item.left {
     display: flex;
     flex-direction: column;
-    padding: 50px 0 50px 50px;
+    padding: 60px 0 60px 50px;
 
   }
 
