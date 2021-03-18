@@ -86,6 +86,19 @@ section {
 
 .footer-distributed p.footer-links a:hover{text-decoration:underline;}
 
+.fa-facebook:hover{
+  color: #3b5998;
+}
+.fa-twitter:hover{
+  color: #00acee;
+}
+.fa-linkedin:hover{
+  color: #0e76a8;
+}
+.fa-github:hover{
+  color: #6e5494;
+}
+
 /* Media Queries */
 
 @media (max-width: 600px) {
