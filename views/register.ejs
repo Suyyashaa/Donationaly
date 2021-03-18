@@ -4,7 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Register</title>
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
   <link rel="stylesheet" href="css/ContactStyles.css">
+  <script src="https://kit.fontawesome.com/2b6852e4e4.js" crossorigin="anonymous"></script>
+  <%- include('partials/header') %>
 </head>
 
 <body>
@@ -48,15 +53,15 @@
                   <input class="app-form-control" placeholder="CONTACT NO" name="contactNo">
                 </div>
                 <div class="app-form-group">
-                    <input class="app-form-control" placeholder="DOB MM-DD-YYYY" name="dob">
+                  <input class="app-form-control" placeholder="DOB MM-DD-YYYY" name="dob">
                 </div>
                 <div class="app-form-group message">
                   <input type="password" class="app-form-control" placeholder="PASSWORD" name="pass1">
                 </div>
                 <div class="app-form-group message">
-                    <input type="password" class="app-form-control" placeholder="RE-TYPE PASSWORD" name="pass2">
+                  <input type="password" class="app-form-control" placeholder="RE-TYPE PASSWORD" name="pass2">
                 </div>
-                
+
                 <div class="app-form-group buttons">
                   <button class="app-form-button" type="reset">RESET</button>
                   <button class="app-form-button" type="submit">REGISTER</button>
@@ -75,7 +80,7 @@
 
     </div>
   </div>
-
+<%- include('partials/footer') %>
 
 </body>
 
