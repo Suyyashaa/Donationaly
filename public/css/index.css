@@ -127,6 +127,7 @@
 
 .slogan h1 {
   font-size: 6em;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .photoscol{
@@ -156,6 +157,8 @@
 }
 .video h1 {
     font-size: 3em;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
 .LCC {
@@ -178,6 +181,8 @@
 
 .gallery h1 {
     font-size: 4em;
+  font-family: 'Quicksand', sans-serif;
+
 }
 
 .gallery img{
