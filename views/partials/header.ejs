@@ -7,8 +7,18 @@
         <li><a href="/about">About</a></li>
         <li><a href="/gallery">Gallery</a></li>
         <li><a href="/contact">Contact</a></li>
+        <%if(!currentUser){%>
         <li><a href="/login">Login</a></li>
         <li><a href="/register">Register</a></li>
+        <%}
+        else{ %>
+          <li class="nav-item">
+            <a class="nav-link" href="">Signed In As <%= currentUser.username %> </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/logout"><span class="fas fa-sign-in-alt"></span> Log out</a>
+            </li>
+            <% } %>
       </ul>
     </nav>
   </div>
