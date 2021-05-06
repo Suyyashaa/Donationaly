@@ -93,4 +93,8 @@ router.post("/contact", function (req, res) {
     });
 });
 
+router.get("/donate", function (req, res) {
+    res.render("donate");
+});
+
 module.exports = router;
