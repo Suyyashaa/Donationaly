@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/donate.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class = "donate-container">
+        <div class = "donate-head">
+            <p class = "donate-header">DONATE TO MAKE A DIFFERENCE</p>
+        </div>
+        <div class="img-sec">
+            <div class = "donate-image">
+                <img class="img-class" src="/assets/donatepage.jpg">
+            </div>
+            <div class="img-text">
+                <p class="well-idk">Be the reason behind such beautiful smiles!</p>
+            </div>
+        </div>
+        <div class = "donate-content-container">
+            <h3 class = "content-heading">THANKYOU FOR CHOOSING DONATIONALY</h3>
+            <p class = "donate-content">The team here at Donationaly truly appreciate the gravity of the contibution you're making. From our end we'll make sure that we deliver the best of the best to the society. From you, all we ask is continued support. Do check in with us once in a while, if you'd like to find out more about what we do!</p>
+            <p class = "content-closing">Together, we make a lot of difference!</p>
+        </div>
+        <div class = "donate-form">
+            <form>
+                <div class="value-buttons">
+                    <input class="val-buttons" type = "button" value="₹1000">
+                    <input class="val-buttons" type = "button" value="₹2000">
+                    <input class="val-buttons" type = "button" value="₹3000">
+                    <input class="val-buttons" type = "button" value="₹5000">
+                    <input class="val-buttons" type = "button" value="₹8000">
+                </div>
+                <div class="inputs-class">
+                    <input class="inputs" type="number" placeholder="Amount In Rupees(₹)"><br>
+                    <input class="inputs" type="text" placeholder="Name"><br>
+                    <input class="inputs" type="email" placeholder="Email Address"><br>
+                    <input class="inputs" type="text" placeholder="Phone"><br>
+                    <input class="inputs" type="text" placeholder="Address">
+                </div>
+                <p class="Exemption">
+                    In accordance with the Finance Act 2020, 80G Tax Exemption is received on providing PAN card details of the donor. Please share your PAN details below to receive the receipt. If not provided receipt will not be shared.
+                </p>
+                <div class="inputs-class">
+                    <input class="inputs" type="text" placeholder="PAN Number"><br>
+                </div>
+                <button class="donate-button" type="submit">DONATE</button>
+            </form>
+        </div>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>

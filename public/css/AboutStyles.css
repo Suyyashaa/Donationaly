@@ -60,3 +60,8 @@ body {
     text-align: center;
     padding-top: 15px;
 }
+
+area{
+    display: block;
+    background-color: rgb(253, 215, 0);
+}

@@ -1,0 +1,121 @@
+.donate-container{
+    width: 70%;
+    margin: auto;
+}
+
+.donate-head{
+    font-weight: bold;
+    font-size: 60px;
+    border-radius: 15px;
+    padding-left: 20px;
+    background-image: linear-gradient(to bottom right,white,  rgb(214, 29, 22));
+}
+
+.img-sec{
+    background-image: linear-gradient(to bottom right,white,  rgb(214, 29, 22));
+    border-radius: 15px;
+}
+.img-class{
+    height: 400px;
+    width: 900px;
+    padding-left:34px;
+    padding-top: 20px;
+}
+
+.img-text{
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.donate-content-container{
+    background-image: linear-gradient(to bottom right,white,  rgb(214, 29, 22));
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.donate-form{
+    background-image: linear-gradient(to bottom right,white,  rgb(214, 29, 22));
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.content-heading{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.donate-content{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Raleway';
+}
+
+.content-closing{
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+.value-buttons{
+    padding-left: 15px;
+}
+
+.inputs-class{
+    padding-left: 60px;
+}
+
+.val-buttons{
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: rgb(240, 231, 231);
+    padding: 10px;
+    margin: 5px;
+}
+
+.val-buttons:hover{
+    border: 0px;
+    background-color:rgb(248, 116, 116);
+    color: white;
+    font-weight: bold;
+}
+
+.donate-form{
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.inputs{
+    width: 85%;
+    margin: 2px;;
+    border: 0px;
+    font-size: 20px;
+    border-bottom: 2px solid black;
+    background-color:rgb(240, 231, 231);
+    color:rgb(121, 10, 6)
+}
+
+.Exemption{
+    text-align: justify;
+    font-family: 'Raleway';
+}
+
+.donate-button {
+    margin:0 auto;
+    display:block;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color:rgb(71, 71, 71);
+    color: white;
+}
+
+.donate-button:hover{
+    background-color:black ;
+    color: rgb(158, 34, 34);
+    font-weight:bold;
+}
