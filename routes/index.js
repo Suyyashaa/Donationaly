@@ -19,6 +19,7 @@ router.post("/login", passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "/login"
 }), function (req, res) {
+    req.flash("success", "User Registered Successfully.Welcome to Donationaly " + user.username);
 });
 
 router.get("/register", function (req, res) {
@@ -27,18 +28,24 @@ router.get("/register", function (req, res) {
 
 router.post("/register", function (req, res) {
     var newUser = new User({ username: req.body.username, email: req.body.email, contactno: req.body.contactno, dob: req.body.dob });
-    User.register(newUser, req.body.password, function (err, user) {
-        if (err) {
-            console.log(err);
-            req.flash("error", err.message);
-            return res.render("register");
-        }
-        passport.authenticate("local")(req, res, function () {
-            req.flash("success", "User Registered Successfully.Welcome to YelpCamp " + user.username);
-            res.redirect("/");
+    if (req.body.password == req.body.pass2) {
+        User.register(newUser, req.body.password, function (err, user) {
+            if (err) {
+                console.log(err);
+                req.flash("error", err.message);
+                return res.redirect("/register");
+            }
+            passport.authenticate("local")(req, res, function () {
+                req.flash("success", "User Registered Successfully.Welcome to Donationaly " + user.username);
+                res.redirect("/");
 
+            });
         });
-    });
+    }
+    else{
+        req.flash("error", "Password Mismatch.");
+        return res.redirect("/register");
+    }
 });
 
 router.get("/logout", function (req, res) {
