@@ -2,6 +2,8 @@ var express = require("express");
 var router = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
+var Ngo = require("../models/ngo");
+
 var nodemailer = require('nodemailer');
 
 router.get("/", function (req, res) {
@@ -89,5 +91,29 @@ router.post("/contact", function (req, res) {
 router.get("/donate", function (req, res) {
     res.render("donate");
 });
+
+router.get("/registerNgo", function (req, res) {
+    res.render("registerNgo");
+});
+
+router.post("/registerNgo", function(req, res){
+  const newNgo = new Ngo({
+    name: req.body.name,
+    email: req.body.username,
+    regNo: req.body.regNo,
+    contact: req.body.contact,
+    description: req.body.description
+
+  });
+  newNgo.save((err) => {
+    if (err){
+      console.log(err);
+    }
+    else{
+      console.log("Saved successfully");
+      res.redirect("/");
+    }
+  })
+})
 
 module.exports = router;

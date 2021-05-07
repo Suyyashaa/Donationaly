@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+body{
+    font-size: 20px;
+    background-image: url("/assets/scene.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.formArea{
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+
+}
+form {
+  width: 600px;
+
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.field-wrap {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+}
+.field-wrap input {
+  width: 100%;
+  flex-grow: 1;
+}
+label {
+  margin-right: 20px;
+  width: 160px;
+}
+
+input[type=text]{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #2d9fd9;
+     color: #a0d18c;
+     width: 250px;
+     height: 30px;
+     padding-left: 10px;
+    }
+textarea{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+   border-radius: 20px;
+   border: 1px solid #2d9fd9;
+   color: #a0d18c;
+   padding-left: 10px;
+
+}
+
+input[type=text]:focus {
+     outline: none;
+     border: 1px solid #a0d18c;
+     color: #2d9fd9;
+}
+
+input[type=submit] {
+  font-size: 18px;
+  width: 100px;
+  height: 40px;
+    padding:5px 15px;
+    background:#fff;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.instructions{
+  background-image: radial-gradient(#f5f5f5 15%,transparent 0),radial-gradient(#f5f5f5 15%,transparent 0);
+    background-color: #fff;
+    background-position: 0 0,50px 50px;
+    background-size: 20px 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 7% 0;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+.ins{
+  font-size: 18px;
+  width: 32%;
+  text-align: center;
+  padding: 1%;
+
+
+}
+.instext{
+  font-style: Poppins !important;
+  color: #474747;
+  font-size: 15px;
+}
+h1{
+  text-align: center;
+  color: coral;
+}

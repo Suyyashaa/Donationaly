@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Donate</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/registerNgo.css">
+  <script src="https://kit.fontawesome.com/2b6852e4e4.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <%- include('partials/header') %>
+  <div class="formArea">
+    <div class="form">
+
+
+
+
+
+      <form action="/registerNgo" method="POST">
+
+
+
+        <div class="field-wrap">
+          <label for="name">Name</label>
+          <br>
+          <input type="text" class="form-control" name="name">
+        </div>
+        <div class="field-wrap">
+          <label for="email">Email</label>
+          <br>
+          <input type="text" class="form-control" name="username">
+        </div>
+        <div class="field-wrap">
+          <label for="contact">Contact Number</label>
+          <br>
+          <input type="text" class="form-control" name="conatact">
+        </div>
+        <div class="field-wrap">
+          <label for="regNo">Registration Number</label>
+          <br>
+          <input type="text" class="form-control" name="regNo">
+        </div>
+        <div class="field-wrap">
+          <label for="description">Description</label>
+          <br>
+          <textarea name="description" class="form-control" rows="8" cols="70"></textarea>
+
+        </div>
+        <input type="submit" name="submit" value="Submit" />
+      </form>
+
+
+    </div>
+    <div class="fromImg">
+      <img src="/assets/ngoreg.svg" alt="" width="500" height="500">
+
+    </div>
+  </div>
+<h1>How to register an NGO?</h1>
+  <div class="instructions">
+
+    <div class="ins">
+      <i class="fas fa-door-open fa-4x"></i>
+      <p>Step 1</p>
+      <p class="instext">Go to out NGO registeration page and enter basic details about your organization</p>
+      <p class="instext">Don't worry we are here to answer any queries or assist you in any way throughout the process</p>
+
+    </div>
+    <div class="ins">
+
+      <i class="fas fa-id-card fa-4x"></i>
+      <p >Step 2</p>
+      <p class="instext">Enter you government issued NGO ID for verification and wait for us to verify it on our side.</p>
+
+    </div>
+    <div class="ins">
+      <i class="fas fa-check-circle fa-4x"></i>
+      <p>Step 3</p>
+      <p class="instext">We will register the NGO and handle all the formalities (Trust Act, Society Registrations Act or the Companies Act, depending on the entity chosen) on our side so that you can start interating with volunteers and beneficiries.</p>
+
+    </div>
+
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+
+</html>
