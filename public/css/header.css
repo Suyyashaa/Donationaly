@@ -78,11 +78,12 @@ nav a:hover::before {
   background-color: beige; /* Red */
   color: red;
   margin-bottom: 15px;
-  text
+  font-size: 14px;
 }
 
 .alert-success{
   background-color: #075233;
+  color: white;
 }
 /* The close button */
 .closebtn {
@@ -96,6 +97,9 @@ nav a:hover::before {
   transition: 0.3s;
 }
 
+.closebtn-error{
+  color: red;
+}
 /* When moving the mouse over the close button */
 .closebtn:hover {
   color: black;
