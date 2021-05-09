@@ -9,6 +9,7 @@ const User = require("./models/user");
 const mongoose = require("mongoose");
 
 var authRoutes = require("./routes/index");
+var donateRoutes= require("./routes/donate");
 
 const uri = process.env.ATLAS_URI;
 console.log(uri);
@@ -46,6 +47,7 @@ app.use(function(req, res, next) {
 
 
 app.use(authRoutes);
+app.use(donateRoutes);
 
 app.listen(3000, function() {
   console.log("Server is running");
