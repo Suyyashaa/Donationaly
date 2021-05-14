@@ -7,28 +7,54 @@
         <li><a href="/about">About</a></li>
         <li><a href="/gallery">Gallery</a></li>
         <li><a href="/contact">Contact</a></li>
+
+        <li>
+
+	<a class="button" href="#popup1"><i class="fas fa-search"></i></a>
+
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Search</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<input type="text" name="search" value="" id="phrase">
+      <button type="button" name="button" id="send">Submit</button>
+
+      <div id="results">
+
+    </div>
+		</div>
+	</div>
+</div>
+</li>
+
+
+
+
+
         <%if(!currentUser){%>
         <li><a href="/login">Login</a></li>
         <li><a href="/register">Register</a></li>
         <%}
         else{ %>
-          <li class="nav-item">
-            <a class="nav-link" href="">Hello <%= currentUser.username %> </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="/logout"><span class="fas fa-sign-in-alt"></span> Log out</a>
-            </li>
-            <% } %>
+        <li class="nav-item">
+          <a class="nav-link" href="">Hello <%= currentUser.username %> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout"><span class="fas fa-sign-in-alt"></span> Log out</a>
+        </li>
+        <% } %>
       </ul>
     </nav>
   </div>
 </div>
 <div class="container">
   <% if(error && error.length > 0) {%>
-    <div class="alert">
-      <span class="closebtn closebtn-error" onclick="this.parentElement.style.display='none';">&times;</span>
-      <%=error%>
-    </div>
+  <div class="alert">
+    <span class="closebtn closebtn-error" onclick="this.parentElement.style.display='none';">&times;</span>
+    <%=error%>
+  </div>
   <% } %>
   <% if(success && success.length > 0) {%>
   <div class="alert alert-success" role="alert">
