@@ -48,16 +48,49 @@
 
 
 
-            <div class="card">
-                <img src="assets/ngo.png" alt="Avatar">
+            <div class="card grow">
+              <a href="/registerNgo"><img src="assets/ngo.png" alt="Avatar"></a>
+
                 <h1><b>Register as an NGO</b></h1>
                 <p>Work for a better cause</p>
             </div>
-            <div class="card">
-                <img src="assets/volunteer.png" alt="Avatar">
-                <h1><b>Donations</b></h1>
-                <p>Donate for good</p>
+            <div class="card grow">
+
+              <a class="button" href="#popup1"><img src="assets/search.png" alt="Avatar"></a>
+
+
+                <h1><b>Search for an NGO</b></h1>
+                <p>Contribute to the cause you believe in and make a difference</p>
             </div>
+            <div class="card grow">
+              <a href="/donate"><img src="assets/volunteer.png" alt="Avatar"></a>
+
+                <h1><b>Donations</b></h1>
+                <p>Your help can bring change.</p>
+            </div>
+
+
+
+
+    <!-- modal html -->
+    <div id="popup1" class="overlay">
+    	<div class="popup">
+    		<h2>Search</h2>
+    		<a class="close" href="#">&times;</a>
+    		<div class="content">
+    			<input type="text" name="search" value="" id="phrase">
+          <button type="button" name="button" id="send">Submit</button>
+
+          <div id="results">
+            <h3>Search results will appear below</h3>
+            <img src="assets/search_results.svg" alt="" width="200" height="200" style="margin-left: 20%;">
+
+        </div>
+    		</div>
+    	</div>
+    </div>
+
+
 
 
 
@@ -170,7 +203,8 @@
 
 
 function addResults(result){
-  $("#results").append(`<h4> ${result.name} </h4> <p> ${result.username} </p>`)
+  $("#results").replaceWith('<div id="results"></div>')
+  $("#results").append(`<h4>Name: ${result.name} </h4> <p>Email Address: ${result.username} </p>`)
 };
 
 function getResults(phrase){
