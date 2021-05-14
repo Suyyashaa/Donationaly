@@ -104,7 +104,7 @@ router.get("/registerNgo", function (req, res) {
 router.post("/registerNgo", function(req, res){
   const newNgo = new Ngo({
     name: req.body.name,
-    email: req.body.username,
+    username: req.body.username,
     regNo: req.body.regNo,
     contact: req.body.contact,
     description: req.body.description
@@ -115,11 +115,11 @@ router.post("/registerNgo", function(req, res){
     if (err){
       console.log(err);
       req.flash("error", err.message);
-      return res.redirect("/registerNgo");
+      res.redirect("/registerNgo");
     }
     else{
       console.log("Saved successfully");
-      req.flash("success", "Registered as an NGO successfully" + user.username);
+      req.flash("success", "Registered as an NGO successfully");
       res.redirect("/");
     }
   })
