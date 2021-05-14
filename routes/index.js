@@ -113,9 +113,12 @@ router.post("/registerNgo", function(req, res){
   newNgo.save((err) => {
     if (err){
       console.log(err);
+      req.flash("error", err.message);
+      return res.redirect("/registerNgo");
     }
     else{
       console.log("Saved successfully");
+      req.flash("success", "Registered as an NGO successfully" + user.username);
       res.redirect("/");
     }
   })
