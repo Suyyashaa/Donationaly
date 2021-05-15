@@ -13,10 +13,6 @@
   color: #2da34b;
 }
 
-.animated h1 {
-  /* font-family: cursive; */
-}
-
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0;
@@ -119,6 +115,11 @@
   background-color: aliceblue;
 }
 
+.ngos {
+  position: relative;
+  width: 100%;
+  background-color:#f7acde;
+}
 .slogan {
   font-family: 'Quicksand', sans-serif;
   padding-top: 2em;
@@ -241,11 +242,15 @@
 }
 
 .video .custom-shape-divider-top-1615984118 .shape-fill {
-    fill: aliceblue;
+    fill: #f7acde;
 }
 
 .gallery .custom-shape-divider-top-1615984118 .shape-fill {
     fill: rgb(253, 199, 117);
+}
+
+.ngos .custom-shape-divider-top-1615984118 .shape-fill {
+  fill: aliceblue;
 }
 
 
@@ -286,5 +291,43 @@
 
 
 
+.items {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  white-space: nowrap;
+  transition: all 0.2s;
+  transform: scale(0.98);
+  will-change: transform;
+  user-select: none;
+  cursor: pointer;
+}
 
 
+.items.active {
+  background: rgba(255,255,255,0.3);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+}
+
+.item {
+  display: inline-block;
+  background: skyblue;
+  max-height: 600px;
+  max-width: 800px;
+  margin: 2em 1em;
+
+}
+
+.item img{
+  padding: 30px;
+  float: left;
+  width: 50%;
+}
+
+.ngo-content{
+  word-wrap: break-word; 
+  width: 50px;
+}

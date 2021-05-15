@@ -30,7 +30,7 @@
                     <a href="/donate">
                         <button class="btn third">Donate Now</button>
                     </a>
-                    
+
                 </div>
 
 
@@ -93,6 +93,44 @@
 
         </div>
 
+        <div class="ngos">
+            <div class="custom-shape-divider-top-1615984118">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <div class="slogan">
+                <h1>NGOs.</h1>
+                The measure of a life, after all, is not its duration, but its donation.
+            </div>
+            <hr width="20%" style="height: 2px; background: orangered;">
+            <div class="items">
+                <div class="item">
+                    <img
+                        src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" />
+                    <h1>MAD</h1>
+                </div>
+                <div class="item">
+                    <img
+                        src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" />
+                    <h1>MAD</h1>
+                </div>
+                <div class="item">
+                    <img
+                        src="https://images.unsplash.com/photo-1594708767771-a7502209ff51?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" />
+                    <h1>MAD</h1>
+                    <div class="ngo-content">
+                        Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries
+                        for previewing layouts and visual mockups.
+                    </div>
+                </div>
+                
+            </div>
+        </div>
         <div class="video">
             <div class="custom-shape-divider-top-1615984118">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
@@ -161,7 +199,35 @@
 
 
         <%- include('partials/footer') %>
+            <script>
+                const slider = document.querySelector('.items');
+                let isDown = false;
+                let startX;
+                let scrollLeft;
 
+                slider.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    slider.classList.add('active');
+                    startX = e.pageX - slider.offsetLeft;
+                    scrollLeft = slider.scrollLeft;
+                });
+                slider.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    slider.classList.remove('active');
+                });
+                slider.addEventListener('mouseup', () => {
+                    isDown = false;
+                    slider.classList.remove('active');
+                });
+                slider.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - slider.offsetLeft;
+                    const walk = (x - startX) * 3; //scroll-fast
+                    slider.scrollLeft = scrollLeft - walk;
+                    console.log(walk);
+                });
+            </script>
 </body>
 
 </html>
