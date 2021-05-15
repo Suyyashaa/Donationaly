@@ -22,7 +22,8 @@ var NgoSchema = new mongoose.Schema({
             },
             message: '{VALUE} is not a valid 10 digit number!'
         }
-    }
+    },
+    image:String,
 });
 
 NgoSchema.plugin(passportLocalMongoose);

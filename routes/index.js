@@ -7,7 +7,14 @@ var Ngo = require("../models/ngo");
 var nodemailer = require('nodemailer');
 
 router.get("/", function (req, res) {
-    res.render("index");
+    Ngo.find({}, function (err, allNgo) {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            res.render("index", { Ngo: allNgo });
+        }
+    });
 });
 
 
@@ -107,8 +114,8 @@ router.post("/registerNgo", function(req, res){
     username: req.body.username,
     regNo: req.body.regNo,
     contact: req.body.contact,
-    description: req.body.description
-
+    description: req.body.description,
+    image:req.body.image
   });
   console.log(newNgo);
   newNgo.save((err) => {
