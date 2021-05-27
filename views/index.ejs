@@ -143,15 +143,21 @@
 
             <div class="slogan">
                 <h1>NGOs.</h1>
-                The measure of a life, after all, is not its duration, but its donation.
+                Service to others is the rent you pay for your room here on earth.
             </div>
             <hr width="20%" style="height: 2px; background: orangered;">
 
             <div class="ngo-horizontal">
                 <% Ngo.forEach(function(ngo){ %>
-
                     <div class="ngo-content">
-                        <img src="<%= ngo.image %>" class="img-fluid">
+                        <img src="<%= ngo.image %>" alt="John" style="width:100%">
+                        <h1><%= ngo.name %></h1>
+                        <!-- <p class="title"><%= ngo.username %></p> -->
+                        <p><%= ngo.description %></p>
+                        <p><button>More Info</button></p>
+                      </div>
+                    <!-- <div class="ngo-content">
+                        <div class="img"><img src="<%= ngo.image %>" class="img-fluid"></div>
                         <div class="caption">
                                 <%= ngo.name %>
                         </div>
@@ -159,7 +165,7 @@
                             <%= ngo.description %>
                             <a href="">More Info</a>
                         </p>
-                    </div>
+                    </div> -->
 
                     <% }); %>
             </div>

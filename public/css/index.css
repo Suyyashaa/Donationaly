@@ -399,16 +399,15 @@
 }
 
 .ngo-horizontal {
+  align-items: stretch;
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-x: hidden;
   overflow-y: hidden;
   transition: all 0.2s;
   transform: scale(0.98);
-  will-change: transform;
-  user-select: none;
-  cursor: pointer;
 }
 
 .ngo-content .caption {
@@ -425,21 +424,51 @@
 }
 
 .ngo-content {
-  padding: 10px;
-  display: inline-flexbox;
-  background: rgb(246, 189, 252);
-  width: 600px;
-  margin: 2em 1em;
-  text-align: justify;
+  max-width: 300px;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+  flex-basis: 300px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
+.ngo-content h1{
+  font-family: 'Quicksand', sans-serif;
+}
+.ngo-content .title{
+  color: grey;
+  font-size: 18px;
+  font-family: 'Quicksand', sans-serif;
+}
 .ngo-content p {
 
   font-family: 'Quicksand', sans-serif;
 }
 
 .ngo-content img {
-  max-width: 100%;
-  max-height: 100%;
-  display: block;
+  width: 100%
+}
+
+.ngo-content button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.ngo-content a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.ngo-content button:hover, a:hover {
+  opacity: 0.7;
 }
