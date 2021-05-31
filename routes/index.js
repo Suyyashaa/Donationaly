@@ -3,6 +3,8 @@ var router = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
 var Ngo = require("../models/ngo");
+var Volunteer = require("../models/volunteer");
+
 
 var nodemailer = require('nodemailer');
 
@@ -131,6 +133,36 @@ router.post("/registerNgo", function(req, res){
     }
   })
 })
+
+router.get("/volunteer", function (req, res) {
+    res.render("volunteer");
+});
+
+router.post("/volunteer", function(req, res){
+  const newVolunteer = new Volunteer({
+    name: req.body.name,
+    email: req.body.email,
+    charity: req.body.charity,
+    contact: req.body.contact,
+    description: req.body.description
+  });
+  console.log(newVolunteer);
+  newVolunteer.save((err) => {
+    if (err){
+      console.log(err);
+      req.flash("error", err.message);
+      res.redirect("/");
+    }
+    else{
+      console.log("Saved successfully");
+      req.flash("success", "Registered as a volunteer successfully");
+      res.redirect("/");
+    }
+  })
+})
+
+
+
 
 router.get("/messages/:phrase", function(req, res){
   console.log(req.params.phrase);

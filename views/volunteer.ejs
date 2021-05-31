@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Volunteer</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/volunteer.css">
+  <script src="https://kit.fontawesome.com/2b6852e4e4.js" crossorigin="anonymous"></script>
+  <link href="your-project-dir/icon-font/lineicons.css" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+
+</head>
+
+<body>
+  <%- include('partials/header') %>
+
+  <h1>Why volunteer?</h1>
+<div class="timeline">
+  <div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+    <div class="timeline__event__icon ">
+      <h1>?</h1>
+
+    </div>
+    <div class="timeline__event__date">
+      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_yzegai4o.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+    </div>
+    <div class="timeline__event__content ">
+      <div class="timeline__event__title">
+        Do the
+      </div>
+      <div class="timeline__event__description">
+
+        <p>Injustices you see happening around you everyday stagger you?</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+    <div class="timeline__event__icon">
+      <h1>?</h1>
+
+    </div>
+    <div class="timeline__event__date">
+      <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_EHugAD.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+    </div>
+    <div class="timeline__event__content">
+      <div class="timeline__event__title">
+        Are you
+      </div>
+      <div class="timeline__event__description">
+
+        <p>Always trying to do the small things you can to help those less fortunate around you?</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+    <div class="timeline__event__icon">
+      <h1>?</h1>
+
+    </div>
+    <div class="timeline__event__date">
+      <!-- <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_wwq2op12.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player> -->
+      <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_kkOS7q.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop autoplay></lottie-player>
+    </div>
+    <div class="timeline__event__content">
+      <div class="timeline__event__title">
+        Do you
+      </div>
+      <div class="timeline__event__description">
+
+        <p>Believe a better tomorrow can is only possible when everyone is equally empowered and has an equal chnace in life?</p>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="timeline__event animated fadeInUp timeline__event--type1">
+    <div class="timeline__event__icon">
+      <h1>?</h1>
+
+    </div>
+
+    <div class="timeline__event__date">
+      <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_Jh1Mie.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+    </div>
+    <div class="timeline__event__content">
+      <div class="timeline__event__title">
+        Are you
+      </div>
+      <div class="timeline__event__description">
+        <p>Crazy enough to think you can change the world?</p>
+      </div>
+    </div>
+  </div>
+
+
+    <h2>Then you have come to the right place!</h2>
+
+
+    <div class="timeline__event animated fadeInUp timeline__event--type1">
+
+
+      <div class="form_content">
+        <div class="form_title">
+          <h2>Register today</h2>
+        </div>
+
+
+        <form action="/volunteer" method="POST">
+
+        <div class="field-wrap">
+          <label for="name">Name</label>
+          <br>
+          <input type="text" class="form-control" name="name">
+        </div>
+
+        <div class="field-wrap">
+          <label for="email">Email</label>
+          <br>
+          <input type="text" class="form-control" name="email">
+        </div>
+        <div class="field-wrap">
+          <label for="contact">Contact No.</label>
+          <br>
+          <input type="text" class="form-control" name="contact">
+        </div>
+
+        <div class="field-wrap">
+          <label for="charity">Charity</label>
+          <br>
+          <input type="text" class="form-control" name="charity">
+        </div>
+
+        <div class="field-wrap">
+          <label for="description">Reason for volunteering</label>
+          <br>
+          <textarea name="description" class="form-control" rows="6" cols="40"></textarea>
+
+        </div>
+        <input type="submit" name="submit" value="Submit" />
+        </form>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+</div>
+<%- include('partials/footer') %>
+</body>
+
+</html>
