@@ -1,67 +1,46 @@
-
-.about-upper{
-    display: flex;
-}
-
-.about-container{
-    width: 85%;
+.about-container-up{
+    width: 70%;
     margin: auto;
-    background-color: whitesmoke;
 }
 
-.about-right{
-    padding: 15px;
-    padding-top: 25px;
+.up-top{
+    background-image: linear-gradient(to bottom right, beige, rgb(248, 248, 93));;
+    height: 280px;
+    padding-top: 50px;
 }
 
-.about-left{
-    padding: 15px;
+.para{
+    text-align: center;
+    font-family: 'Beth Ellen', cursive;
+    font-size: 45px;
+}
+
+.up-top p{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+}
+
+.up-top button{
+    padding: 4px;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.up-top button:hover{
+    font-weight: bold;
+    color: beige;
+    background-color: black;
+}
+
+.about-container-below{
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
     text-align: justify;
 }
 
-.about-heading{
-    background-color: rgb(167, 164, 164);
-    padding: 10px;
-    margin: 10px;
-    font-family: "Akaya Teliviga";
-    font-size: 30px;
-    border-radius: 5px;
-}
-
-.about-right img{
-    filter: grayscale(100%);
-	border-radius: 5px;
-}
-
-.about-right img:hover {
-    filter: grayscale(0%);
-	border-radius: 5px;
-}
-
-.about-quote{
-    font-style: italic;
-}
-
-.about-quote:hover{
-    background-color: beige;
-}
-
-.about-left{
-    font-family: "Lobster";
-    font-size: 18px;
-}
-
-body {
-
-  }
-
-
-.about-map{
-    text-align: center;
-    padding-top: 15px;
-}
-
-area{
-    display: block;
-    background-color: rgb(253, 215, 0);
+.about-container-below p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
 }
