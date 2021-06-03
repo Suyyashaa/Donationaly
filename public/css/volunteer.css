@@ -261,12 +261,6 @@ h1{
 }
 
 
-
-
-
-
-
-
 .field-wrap {
   text-align: center;
   width: 100%;
@@ -324,4 +318,13 @@ input[type=submit] {
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+}
+
+.form-control-aarsh{
+	width: 100%;
+	font-size: 18px;
+	border: 1px solid #2d9fd9;
+	border-radius: 15px;
+	margin-left: 25px;
+	padding: 4px;
 }
