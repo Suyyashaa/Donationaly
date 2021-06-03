@@ -472,3 +472,7 @@
 .ngo-content button:hover, a:hover {
   opacity: 0.7;
 }
+
+.justify-ngo-desc{
+  text-align: justify;
+}
