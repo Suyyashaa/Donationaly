@@ -1,10 +1,19 @@
 var express = require("express");
 var router = express.Router();
+var Ngo = require("../models/ngo");
 var Donation = require("../models/donations");
 var middleware = require("../middleware");
 
 router.get("/donate", middleware.isLoggedIn, function (req, res) {
-  res.render("donate");
+  Ngo.find({}, function (err, allNgo) {
+    if (err) {
+        console.log(err);
+    }
+    else {
+        res.render("donate", { Ngo: allNgo });
+    }
+});
+
 });
 
 router.post("/donate", middleware.isLoggedIn, function (req, res) {
@@ -18,6 +27,9 @@ router.post("/donate", middleware.isLoggedIn, function (req, res) {
     donation_user: {
       id: req.user._id,
       username: req.user.username
+    },
+    donation_ngo:{
+      id: req.body.ngo
     }
   };
   Donation.create(newDonation,(err,donation) => {

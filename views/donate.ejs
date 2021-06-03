@@ -54,6 +54,12 @@
                         <input name="email" class="inputs" type="email" placeholder="Email Address" value= <%= currentUser.email %> ><br>
                         <input name="phone" class="inputs" type="text" placeholder="Phone" value= <%= currentUser.contactno %> ><br>
                         <input name="address" class="inputs" type="text" placeholder="Address">
+                        <select name="ngo" class="inputs" style="width:300px;">
+                            <option value="" disabled selected>Make a Donation to</option>
+                            <% Ngo.forEach(function(ngo){ %>
+                            <option value="<%= ngo._id %>"><%= ngo.name %></option>
+                            <% }); %>
+                          </select>
                     </div>
                     <p class="Exemption">
                         In accordance with the Finance Act 2020, 80G Tax Exemption is received on providing PAN card

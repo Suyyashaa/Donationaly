@@ -39,6 +39,12 @@ var NgoSchema = new mongoose.Schema({
         },
         username:String
     },
+    donation_ngo:{
+        id:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Ngo"
+        },
+    },
 });
 
 NgoSchema.plugin(passportLocalMongoose);

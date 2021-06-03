@@ -4,7 +4,7 @@ var passport = require("passport");
 var User = require("../models/user");
 var Ngo = require("../models/ngo");
 var Volunteer = require("../models/volunteer");
-
+var middleware = require("../middleware");
 
 var nodemailer = require('nodemailer');
 
@@ -134,11 +134,11 @@ router.post("/registerNgo", function(req, res){
   })
 })
 
-router.get("/volunteer", function (req, res) {
+router.get("/volunteer",middleware.isLoggedIn, function (req, res) {
     res.render("volunteer");
 });
 
-router.post("/volunteer", function(req, res){
+router.post("/volunteer",middleware.isLoggedIn, function(req, res){
   const newVolunteer = new Volunteer({
     name: req.body.name,
     email: req.body.email,
