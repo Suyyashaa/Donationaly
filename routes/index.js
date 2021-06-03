@@ -135,14 +135,23 @@ router.post("/registerNgo", function(req, res){
 })
 
 router.get("/volunteer",middleware.isLoggedIn, function (req, res) {
-    res.render("volunteer");
+  Ngo.find({}, function (err, allNgo) {
+    if (err) {
+        console.log(err);
+    }
+    else {
+        res.render("volunteer", { Ngo: allNgo });
+    }
+});
 });
 
 router.post("/volunteer",middleware.isLoggedIn, function(req, res){
   const newVolunteer = new Volunteer({
-    name: req.body.name,
+    volunteer_name: req.body.name,
     email: req.body.email,
-    charity: req.body.charity,
+    charity:{
+      id: req.body.charity
+    },
     contact: req.body.contact,
     description: req.body.description
   });

@@ -47,9 +47,12 @@
         </div>
 
         <div class="types_of_users">
+            <div class="card grow">
+                <a href="/volunteer"><img src="assets/volunteer.png" alt="Avatar"></a>
 
-
-
+                <h1><b>Volunteer with us</b></h1>
+                <p>Your help can bring change.</p>
+            </div>
             <div class="card grow">
                 <a href="/registerNgo"><img src="assets/ngo.png" alt="Avatar"></a>
 
@@ -65,12 +68,12 @@
                 <p>Contribute to the cause you believe in and make a difference</p>
             </div>
             <div class="card grow">
-                <a href="/donate"><img src="assets/volunteer.png" alt="Avatar"></a>
+                <a href="/donate"><img src="assets/donation.jpg" alt="Avatar"></a>
 
-                <h1><b>Donations</b></h1>
-                <p>Your help can bring change.</p>
+                <h1><b>Donate for a cause</b></h1>
+                <p>Giving is the greatest act of grace.</p>
             </div>
-
+            
 
 
 
@@ -154,7 +157,7 @@
                         <h1><%= ngo.name %></h1>
                         <!-- <p class="title"><%= ngo.username %></p> -->
                         <p><%= ngo.description %></p>
-                        <p><button>More Info</button></p>
+                        <p><a href="/donate"></a><button>Donate now</button></p></a>
                       </div>
                     <!-- <div class="ngo-content">
                         <div class="img"><img src="<%= ngo.image %>" class="img-fluid"></div>

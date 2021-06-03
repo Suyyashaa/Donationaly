@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 var passportLocalMongoose=require("passport-local-mongoose");
 
 var VolunteerSchema = new mongoose.Schema({
-    name: String,
+    volunteer_name: String,
     email: {
         type: String,
         validate:{
@@ -13,8 +13,12 @@ var VolunteerSchema = new mongoose.Schema({
         }
     },
     description: String,
-    charity: String,
-
+    charity: {
+        id:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Ngo"
+        },
+    },
     contact: {
         type: String,
         validate: {
