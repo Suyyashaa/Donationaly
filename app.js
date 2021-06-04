@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -7,6 +6,7 @@ const LocalStratergy = require("passport-local");
 const flash = require("connect-flash");
 const User = require("./models/user");
 const mongoose = require("mongoose");
+require('dotenv').config();
 
 var authRoutes = require("./routes/index");
 var donateRoutes= require("./routes/donate");
