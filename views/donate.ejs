@@ -41,37 +41,44 @@
             </div>
             <div class="donate-form">
                 <form action="/donate" method="POST">
-                    <p id="id_val_buttons">
+                    <!-- <p id="id_val_buttons">
                         <label><input type="radio" name="val_buttons" value="1000"><span>₹1000</span></label>
                         <label><input type="radio" name="val_buttons" value="2000"><span>₹2000</span></label>
                         <label><input type="radio" name="val_buttons" value="3000"><span>₹3000</span></label>
                         <label><input type="radio" name="val_buttons" value="4000"><span>₹4000</span></label>
                         <label><input type="radio" name="val_buttons" value="5000"><span>₹5000</span></label>
-                    </p>
+                    </p> -->
                     <div class="inputs-class">
-                        <input name="amount" id="amount" class="inputs" type="number" placeholder="Amount In Rupees(₹)" value=""><br>
+                        <!-- <input name="amount" id="amount" class="inputs" type="number" placeholder="Amount In Rupees(₹)" value=""><br> -->
                         <input name="name" class="inputs" type="text" placeholder="Name" value= <%= currentUser.username %> ><br>
                         <input name="email" class="inputs" type="email" placeholder="Email Address" value= <%= currentUser.email %> ><br>
                         <input name="phone" class="inputs" type="text" placeholder="Phone" value= <%= currentUser.contactno %> ><br>
-                        <input name="address" class="inputs" type="text" placeholder="Address">
-                        <select name="ngo" class="inputs" style="width:300px;">
+                        <select name="ngo" class="inputs" style="width:300px;" id="sel" onchange="getOption()">
                             <option value="" disabled selected>Make a Donation to</option>
                             <% Ngo.forEach(function(ngo){ %>
                             <option value="<%= ngo._id %>"><%= ngo.name %></option>
                             <% }); %>
                           </select>
+                          
+                          <% Ngo.forEach(function(ngo){ %>
+                            <div id="<%= ngo._id %>" style="display: none; justify-content:center;">
+                                <img src="<%= ngo.qr %>">
+                            </div>
+                            <% }); %>
                     </div>
-                    <p class="Exemption">
+                    <!-- <p class="Exemption">
                         In accordance with the Finance Act 2020, 80G Tax Exemption is received on providing PAN card
                         details of the donor. Please share your PAN details below to receive the receipt. If not
                         provided receipt will not be shared.
                     </p>
                     <div class="inputs-class">
                         <input name="pan" class="inputs" type="text" placeholder="PAN Number"><br>
-                    </div>
+                    </div> -->
+                    <div id="add_to_me"></div>
                     <button class="donate-button" type="submit">DONATE</button>
                 </form>
             </div>
+            
         </div>
         <script>
             if (document.querySelector('input[name="val_buttons"]')) {
@@ -88,3 +95,14 @@
 </body>
 
 </html>
+
+<script>
+    console.log(document.getElementById('sel').value);
+
+function getOption() {
+  var id = (document.getElementById('sel').value);
+  var x = document.getElementById(id);
+  x.style.display = "flex";
+  x.style.padding = "10px";
+}
+</script>
