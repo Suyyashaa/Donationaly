@@ -24,6 +24,7 @@ var NgoSchema = new mongoose.Schema({
         }
     },
     image:String,
+    qr:String,
 });
 
 NgoSchema.plugin(passportLocalMongoose);

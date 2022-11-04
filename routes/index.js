@@ -117,7 +117,8 @@ router.post("/registerNgo", function(req, res){
     regNo: req.body.regNo,
     contact: req.body.contact,
     description: req.body.description,
-    image:req.body.image
+    image:req.body.image,
+    qr:req.body.qr
   });
   console.log(newNgo);
   newNgo.save((err) => {
