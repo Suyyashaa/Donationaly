@@ -41,7 +41,7 @@ router.post("/donate", middleware.isLoggedIn, function (req, res) {
     else {
       console.log("Saved successfully");
       req.flash("success", "Donation Successfull " + req.user.username);
-      return res.redirect("/");
+      return res.redirect("/submit");
     }
   })
 });

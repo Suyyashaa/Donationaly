@@ -146,6 +146,17 @@ router.get("/volunteer",middleware.isLoggedIn, function (req, res) {
 });
 });
 
+router.get("/submit",middleware.isLoggedIn, function (req, res) {
+  Ngo.find({}, function (err, allNgo) {
+    if (err) {
+        console.log(err);
+    }
+    else {
+        res.render("submit");
+    }
+});
+});
+
 router.post("/volunteer",middleware.isLoggedIn, function(req, res){
   const newVolunteer = new Volunteer({
     volunteer_name: req.body.name,
